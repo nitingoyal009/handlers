@@ -6,4 +6,11 @@
             copy:
                 content: "Ansible Ex447 practice"
                 dest: /root/ansible447
-            
+            notify: restart_httpd
+
+  handlers:
+          - name: restart_httpd
+            service:
+                name: httpd
+                state: restarted
+...                
