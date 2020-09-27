@@ -1,0 +1,9 @@
+---
+- name: restart httpd when file update
+  hosts: all
+  tasks:
+          - name: copy content
+            copy:
+                content: "Ansible Ex447 practice"
+                dest: /root/ansible447
+            
