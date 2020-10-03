@@ -4,7 +4,7 @@
   tasks:
           - name: copy content
             copy:
-                content: "Ansible Ex447 practice"
+                content: "Ansible Ex447 practice 2nd"
                 dest: /root/ansible447
             notify: restart_httpd
 
@@ -13,4 +13,6 @@
             service:
                 name: httpd
                 state: restarted
-...                
+                enabled: yes
+
+                
